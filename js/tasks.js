@@ -18,7 +18,7 @@ console.log(userNames);
 // Получить массив объектов пользователей по цвету глаз (поле eyeColor).
 
 const getUsersWithEyeColor = (users, color) => {
-  return users.filter(users => users.eyeColor === color);
+  return users.filter(user => user.eyeColor === color);
 };
 
 console.log(getUsersWithEyeColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
@@ -27,7 +27,16 @@ console.log(getUsersWithEyeColor(users, "blue")); // [объект Moore Hensley
 // Получить массив имен пользователей по полу (поле gender).
 
 const getUsersWithGender = (users, gender) => {
-  return users.filter(users => users.gender === gender);
+  return users.filter(user => user.gender === gender);
 };
 
 console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+// TASK 4
+// Получить массив только неактивных пользователей (поле isActive).
+
+const getInactiveUsers = (users) => {
+  return users.filter(user => !user.isActive);
+};
+
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
